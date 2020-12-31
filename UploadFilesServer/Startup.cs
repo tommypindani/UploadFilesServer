@@ -32,7 +32,7 @@ namespace UploadFilesServer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<UserContext>(opts =>
-               opts.UseSqlServer(Configuration["sqlconnection:connectionString"]));
+               opts.UseSqlServer(Configuration["sqlconnection:DefaultConnection"]));
 
             services.AddCors(options =>
             {
